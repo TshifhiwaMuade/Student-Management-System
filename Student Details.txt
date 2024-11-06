@@ -1,0 +1,21 @@
+Student ID,Name,Age,Course
+1,John Doe,21,Computer Science
+2,Jane Smith,19,Business
+3,Michael Johnson,22,Computer Science
+4,Emily Davis,20,Psychology
+5,William Brown,23,Mechanical Engineering
+6,Sarah Wilson,18,Business
+7,David Lee,21,Computer Science
+8,Olivia Taylor,19,English Literature
+9,Matthew Anderson,22,Computer Science
+10,Isabella Garcia,20,Psychology
+11,Christopher Hernandez,21,Mechanical Engineering
+12,Sophia Diaz,19,Business
+13,Daniel Sanchez,22,Computer Science
+14,Ava Reyes,20,Psychology
+15,Joshua Morales,21,Mechanical Engineering
+16,Mia Flores,19,Business
+17,Ethan Gutierrez,22,Computer Science
+18,Emma Ramirez,20,Psychology
+19,Jacob Gonzalez,21,Mechanical Engineering
+20,Isabella Castillo,19,Business
