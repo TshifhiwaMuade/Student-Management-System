@@ -129,5 +129,9 @@ namespace Student_Management_System
             TxtTotalStudents.Text = lineCount.ToString();
 
         }
+         private void BtnExit_Click(object sender, EventArgs e)
+         {
+             Environment.Exit(0);
+         }
     }
 }
