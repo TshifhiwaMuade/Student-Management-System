@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using System.Data;
 
 namespace Student_Management_System
 {
@@ -57,6 +58,48 @@ namespace Student_Management_System
         }
 
         private void TxtCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+         private void BtnViewStudents_Click(object sender, EventArgs e)
+         {
+             string path = @"C:\Users\Glory Binkatabana\Documents\PRG 282 Project\Student Management System\Student Details.txt";
+
+             // Clear existing rows in the DataGridView
+             DGVliststudent.Rows.Clear();
+
+             // Ensure file exists before attempting to read
+             if (File.Exists(path))
+             {
+                 using (StreamReader sr = new StreamReader(path))
+                 {
+                     string line; 
+
+                     while ((line = sr.ReadLine()) != null)
+                     {
+                         // Split the line by commas to get individual fields
+                         string[] values = line.Split(',');
+
+                         // Add the values as a new row in the DataGridView
+                         DGVliststudent.Rows.Add(values);
+                     }
+                 }
+             }
+             else
+             {
+                 MessageBox.Show("The file does not exist.");
+             }
+         }
+
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DGVliststudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
