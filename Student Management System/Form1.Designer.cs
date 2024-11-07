@@ -40,6 +40,10 @@ namespace Student_Management_System
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.DGVliststudent = new System.Windows.Forms.DataGridView();
+            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Course = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnViewStudents = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtTotalStudents = new System.Windows.Forms.TextBox();
@@ -47,10 +51,7 @@ namespace Student_Management_System
             this.TxtAverageAge = new System.Windows.Forms.TextBox();
             this.BtnGenerateReport = new System.Windows.Forms.Button();
             this.TxtStudentId = new System.Windows.Forms.TextBox();
-            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Course = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnCount = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVliststudent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,6 +169,34 @@ namespace Student_Management_System
             this.DGVliststudent.TabIndex = 13;
             this.DGVliststudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVliststudent_CellContentClick);
             // 
+            // StudentID
+            // 
+            this.StudentID.HeaderText = "StudentID";
+            this.StudentID.MinimumWidth = 6;
+            this.StudentID.Name = "StudentID";
+            this.StudentID.Width = 125;
+            // 
+            // StudentName
+            // 
+            this.StudentName.HeaderText = "Name";
+            this.StudentName.MinimumWidth = 6;
+            this.StudentName.Name = "StudentName";
+            this.StudentName.Width = 125;
+            // 
+            // Age
+            // 
+            this.Age.HeaderText = "Age";
+            this.Age.MinimumWidth = 6;
+            this.Age.Name = "Age";
+            this.Age.Width = 125;
+            // 
+            // Course
+            // 
+            this.Course.HeaderText = "Course";
+            this.Course.MinimumWidth = 6;
+            this.Course.Name = "Course";
+            this.Course.Width = 125;
+            // 
             // BtnViewStudents
             // 
             this.BtnViewStudents.Location = new System.Drawing.Point(440, -1);
@@ -180,12 +209,10 @@ namespace Student_Management_System
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(688, 48);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Total Students";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 22;
             // 
             // TxtTotalStudents
             // 
@@ -193,6 +220,7 @@ namespace Student_Management_System
             this.TxtTotalStudents.Name = "TxtTotalStudents";
             this.TxtTotalStudents.Size = new System.Drawing.Size(101, 22);
             this.TxtTotalStudents.TabIndex = 16;
+            this.TxtTotalStudents.TextChanged += new System.EventHandler(this.TxtTotalStudents_TextChanged);
             // 
             // label2
             // 
@@ -226,39 +254,22 @@ namespace Student_Management_System
             this.TxtStudentId.Size = new System.Drawing.Size(112, 22);
             this.TxtStudentId.TabIndex = 20;
             // 
-            // StudentID
+            // BtnCount
             // 
-            this.StudentID.HeaderText = "StudentID";
-            this.StudentID.MinimumWidth = 6;
-            this.StudentID.Name = "StudentID";
-            this.StudentID.Width = 125;
-            // 
-            // StudentName
-            // 
-            this.StudentName.HeaderText = "Name";
-            this.StudentName.MinimumWidth = 6;
-            this.StudentName.Name = "StudentName";
-            this.StudentName.Width = 125;
-            // 
-            // Age
-            // 
-            this.Age.HeaderText = "Age";
-            this.Age.MinimumWidth = 6;
-            this.Age.Name = "Age";
-            this.Age.Width = 125;
-            // 
-            // Course
-            // 
-            this.Course.HeaderText = "Course";
-            this.Course.MinimumWidth = 6;
-            this.Course.Name = "Course";
-            this.Course.Width = 125;
+            this.BtnCount.Location = new System.Drawing.Point(681, 44);
+            this.BtnCount.Name = "BtnCount";
+            this.BtnCount.Size = new System.Drawing.Size(99, 28);
+            this.BtnCount.TabIndex = 21;
+            this.BtnCount.Text = "Count Students";
+            this.BtnCount.UseVisualStyleBackColor = true;
+            this.BtnCount.Click += new System.EventHandler(this.BtnCount_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1374, 450);
+            this.Controls.Add(this.BtnCount);
             this.Controls.Add(this.TxtStudentId);
             this.Controls.Add(this.BtnGenerateReport);
             this.Controls.Add(this.TxtAverageAge);
@@ -311,6 +322,7 @@ namespace Student_Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
         private System.Windows.Forms.DataGridViewTextBoxColumn Course;
+        private System.Windows.Forms.Button BtnCount;
     }
 }
 
