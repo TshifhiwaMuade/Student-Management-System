@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 //using System.Data;
 
 namespace Student_Management_System
@@ -83,6 +84,7 @@ namespace Student_Management_System
 
                          // Add the values as a new row in the DataGridView
                          DGVliststudent.Rows.Add(values);
+                       
                      }
                  }
              }
@@ -100,12 +102,30 @@ namespace Student_Management_System
         }
 
         private void DGVliststudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
-         {
-             DataGridViewRow row = this.DGVliststudent.Rows[e.RowIndex];
-             TxtStudentId.Text = row.Cells[0].Value.ToString();
-             TxtName.Text = row.Cells[1].Value.ToString();
-             TxtAge.Text = row.Cells[2].Value.ToString();
-             TxtCourse.Text = row.Cells[3].Value.ToString();
-         }
+        {
+            DataGridViewRow row = this.DGVliststudent.Rows[e.RowIndex];
+            TxtStudentId.Text = row.Cells[0].Value.ToString();
+            TxtName.Text = row.Cells[1].Value.ToString();
+            TxtAge.Text = row.Cells[2].Value.ToString();
+            TxtCourse.Text = row.Cells[3].Value.ToString();
+        }
+
+        private void TxtTotalStudents_TextChanged(object sender, EventArgs e)
+        {
+            string filePath = @"C:\Users\Glory Binkatabana\Documents\PRG 282 Project\Student Management System\Student Details.txt";
+            int lineCount = File.ReadAllLines(filePath).Length - 1;
+            TxtTotalStudents.Text = lineCount.ToString();
+            
+        }
+
+
+
+        private void BtnCount_Click(object sender, EventArgs e)
+        {
+            string filePath = @"C:\Users\Glory Binkatabana\Documents\PRG 282 Project\Student Management System\Student Details.txt";
+            int lineCount = File.ReadAllLines(filePath).Length - 1;
+            TxtTotalStudents.Text = lineCount.ToString();
+
+        }
     }
 }
