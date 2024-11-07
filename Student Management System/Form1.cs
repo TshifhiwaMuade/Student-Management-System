@@ -77,6 +77,8 @@ namespace Student_Management_System
                  {
                      string line; 
 
+                     sr.ReadLine(); // so it can skip the first line in the txt file
+
                      while ((line = sr.ReadLine()) != null)
                      {
                          // Split the line by commas to get individual fields
