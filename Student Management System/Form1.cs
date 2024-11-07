@@ -100,8 +100,12 @@ namespace Student_Management_System
         }
 
         private void DGVliststudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+         {
+             DataGridViewRow row = this.DGVliststudent.Rows[e.RowIndex];
+             TxtStudentId.Text = row.Cells[0].Value.ToString();
+             TxtName.Text = row.Cells[1].Value.ToString();
+             TxtAge.Text = row.Cells[2].Value.ToString();
+             TxtCourse.Text = row.Cells[3].Value.ToString();
+         }
     }
 }
